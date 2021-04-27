@@ -42,12 +42,14 @@ class MainActivity : AppCompatActivity() {
 
     private var mProgressDialog: Dialog? = null
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
+        Log.d("HEllo", "TEST")
         if (!isLocationEnabled()) {
             Toast.makeText(this, "Turn your location on", Toast.LENGTH_LONG).show()
             val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
